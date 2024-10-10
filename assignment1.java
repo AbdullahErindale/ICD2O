@@ -10,7 +10,7 @@ import java.lang.Math;
  *
  * @author 867292
  */
-public class Assignment1 {
+public class assignment1 {
 
     /**
      * @param args the command line arguments
