@@ -1,4 +1,4 @@
-class Mathtest1 {
+class lesson2 {
   public static void main(String [] args) {
     // place your code here!
     double circ;
