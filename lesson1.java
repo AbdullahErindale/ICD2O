@@ -1,4 +1,4 @@
-class SayName {
+class lesson1 {
   public static void main(String [] args) {
     // place your code here!
     String name = "Abdullah";
