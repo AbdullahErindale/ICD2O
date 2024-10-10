@@ -1,4 +1,4 @@
-class Sanjay {
+class lesson3 {
   public static void main(String [] args) {
     // place your code here!
     int bowl = 6;
