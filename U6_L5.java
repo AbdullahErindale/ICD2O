@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class factorial {
+class U6_L5 {
    public static void main(String [] args) {
       Scanner kb = new Scanner(System.in);
       System.out.print("Enter a number: ");
