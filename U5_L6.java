@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class U5 L6 {
+class U5_L6 {
   public static void main(String[] args) {
     Scanner kbd = new Scanner(System.in);
     String greeting = new String();
