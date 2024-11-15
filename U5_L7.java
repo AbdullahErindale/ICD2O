@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class U5 L7 {
+public class U5_L7 {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in); //open for keyboard input
         System.out.print("Enter an integer: ");
