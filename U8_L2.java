@@ -1,7 +1,7 @@
 // any import statements go here!
 import java.util.Scanner;
 
-public class Calc {
+public class U6_L2 {
     public static void main(String[] args) {
         // Your code goes here!
         Scanner scan = new Scanner(System.in);
