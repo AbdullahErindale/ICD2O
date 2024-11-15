@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class U6 L1 {
+class U6_L1 {
  public static void main(String[] args) {
     Scanner kb = new Scanner(System.in);
     System.out.print("What is the chance to rain (enter in decimal form): ");
