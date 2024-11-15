@@ -1,4 +1,4 @@
-class U5 L5 {
+class U5_L5 {
   public static void main(String[] args) {
 
     // declare variables to store the type of transport and the number of wheels
