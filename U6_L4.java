@@ -1,4 +1,4 @@
-class U6 L4 {
+class U6_L4 {
    public static void main(String [] args) {
       String w1 = "shellshock";
       String w2 = "shellac";
