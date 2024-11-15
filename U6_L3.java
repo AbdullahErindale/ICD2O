@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class U6 L3 {
+class U6_L3 {
    public static void main(String [] args) {
       // enter your code here!
       Scanner kb = new Scanner(System.in);
