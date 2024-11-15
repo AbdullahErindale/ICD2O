@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
 
-class U6 L6 {
+class U6_L6 {
   public static void main(String [] args) {
   	Scanner kb = new Scanner(System.in);
   	String choice = "a, b or c";
