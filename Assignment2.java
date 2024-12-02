@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author 867292
  */
-public class Assignment2 {
+public class JavaApplication2 {
 
     /**
      * @param args the command line arguments
@@ -44,10 +44,9 @@ public class Assignment2 {
             }
             amount++;
             System.out.printf("\nthe largest number was %,d", largest);
-            System.out.printf("\nthere was %,d terms printed", amount);
-            System.out.print("continue? (y/n)");
+            System.out.printf("\nthere were %,d terms printed", amount);
+            System.out.print("\ncontinue? (y/n)");
             resp = kb.next().toLowerCase().charAt(0);
         } while (resp == 'y');
-            
     }
 }
