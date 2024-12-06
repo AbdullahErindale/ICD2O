@@ -25,7 +25,8 @@ public class Assignment3 {
         char output = 0;
         char input = 0;
         char resp = 0;
-        
+        int counter1 = 0;
+        int counter2 = 0;
         do {
             System.out.print("Lets play rock paper scissors. \nPick s for scissors, p for paper, r for rock: ");
             input = kb.next().charAt(0);
@@ -44,32 +45,44 @@ public class Assignment3 {
             System.out.println(output);
             if ((output == 's') && (input == 'p')){
                 System.out.println("I win!");
+                counter1++;
+                System.out.printf("The score is %d %d!", counter1, counter2);
             }
             if ((output == 's') && (input == 'r')){
                 System.out.println("You win!");
+                counter2++;
+                System.out.printf("The score is %d %d!", counter1, counter2);
             }
             if ((output == 'p') && (input == 's')){
                 System.out.println("You win!");
+                counter2++;
+                System.out.printf("The score is %d %d!", counter1, counter2);
             } 
             if ((output == 'p') && (input == 'r')){
-                System.out.println("I win!");
+                counter1++;
             }
             if ((output == 'r') && (input == 'p')){
                 System.out.println("You win!");
+                counter2++;
+                System.out.printf("The score is %d %d!", counter1, counter2);
             } 
             if ((output == 'r') && (input == 's')){
                 System.out.println("I win!");
+                counter1++;
+                System.out.printf("The score is %d %d!", counter1, counter2);
             } 
             if ((output == 's') && (input == 's')){
                 System.out.println("It's a tie!");
             } 
             if ((output == 'p') && (input == 'p')){
                 System.out.println("It's a tie!");
+                System.out.printf("The score is %d %d!", counter1, counter2);
             }
             if ((output == 'r') && (input == 'r')){
                 System.out.println("It's a tie!");
+                System.out.printf("The score is %d"+", "+"%d!", counter1, counter2);
             }
-            System.out.print("Go again?(y/n): ");
+            System.out.print("\nGo again?(y/n): ");
             resp = kb.next().charAt(0);
         }while (resp == 'y');
     }
