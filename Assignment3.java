@@ -14,6 +14,7 @@ VARIABLE DICTIONARY:
   counter2(int) counts how many wins from the user
  */
 package assignment3;
+//importing required libraries
 import java.util.Scanner;
 import java.util.Random;
 /**
@@ -26,9 +27,9 @@ public class Assignment3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //creates scanner
         Scanner kb = new Scanner(System.in);
-        Random rand = new Random();
+        //creates required variables
         int min = 1;
         int max = 3;
         double n = 0;
@@ -37,12 +38,17 @@ public class Assignment3 {
         char resp = 0;
         int counter1 = 0;
         int counter2 = 0;
+        //do loop
         do {
+            //beginning fo the loop
             System.out.print("Lets play rock paper scissors. \nPick s for scissors, p for paper, r for rock: ");
+            //assigns user response to input
             input = kb.next().charAt(0);
+            //random number generator
             for (int i = 0; i < 10; i++) {
                 n = (int) (max * Math.random()) + min;
             }
+            //if loops to choose which choice the computer will choose
             if (n == 1){
                 output = 's';
             }
@@ -52,6 +58,7 @@ public class Assignment3 {
             if (n == 3){
                 output = 'r';
             }
+            //calculates who wins depending on the choices and adds to counter depending on who wins
             System.out.println(output);
             if ((output == 's') && (input == 'p')){
                 System.out.println("I win!");
@@ -92,8 +99,10 @@ public class Assignment3 {
                 System.out.println("It's a tie!");
                 System.out.printf("The score is %d"+", "+"%d!", counter1, counter2);
             }
+            //code to ask for another round
             System.out.print("\nGo again?(y/n): ");
             resp = kb.next().charAt(0);
         }while (resp == 'y');
+      //end of do loop
     }
 }
