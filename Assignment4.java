@@ -1,6 +1,6 @@
 /*
 Abdullah 867292
-Date: 9 January, 2025
+Date: 13     January, 2025
 Course: Grade 10 Comp Sci
 Title: Final Assignment 
 Description: Credit card balance calculator.
@@ -53,6 +53,7 @@ public class FinalAssignment {
             d = kb.nextDouble();
             f = (1+r/12)*b-d+p;
             System.out.printf("Your final balance will be %.2f \n", f);
+            //if statments to figure out which balance will be the largest
             if (f > largest){
                 largest = f;
             }
@@ -63,7 +64,8 @@ public class FinalAssignment {
             System.out.print("Would you like to add another customer? (y/n)");
             resp = kb.next().toLowerCase().charAt(0);
         }while (resp == 'y');
-        System.out.printf("The largest balance was %.2f and the smallest balance was %.2f", largest, smallest);
+        System.out.printf("The largest balance was %.2f and the smallest balance was %.2f \n", largest, smallest);
+        System.out.printf("There were %s customers \n", tally);
     }
     
 }
