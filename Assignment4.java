@@ -16,55 +16,46 @@ resp    (char)
  */
 package pkgfinal.assignment;
 import java.util.Scanner;
+import java.io.*;
 /**
  *
  * @author 867292
  */
 public class FinalAssignment {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        //Declares the Scanner object
-        Scanner kb = new Scanner(System.in);
-        //Declaration for required variables
+        String fileName = "ledger.dat";
+        double smallest = 999999;
+        double largest = -999999;
         double r = 0.28;
-        double b;
-        double p;
-        double d;
-        double f;
-        char resp;
-        double largest = -999;
-        double smallest = 999;
-        //To count the amount of customers
         int tally = 0;
-        
-        //Algorithm that calculates the balance for the user
-        do {
-            tally++;
-            //Asks information to calculate the final balance
-            System.out.print("What is your current balance: ");
-            b = kb.nextDouble();
-            System.out.print("How much is the purchase you want to make: ");
-            p = kb.nextDouble();
-            System.out.print("How much is the payment you will make: ");
-            d = kb.nextDouble();
-            f = (1+r/12)*b-d+p;
-            System.out.printf("Your final balance will be %.2f \n", f);
-            //if statments to figure out which balance will be the largest
-            if (f > largest){
-                largest = f;
+        try {
+            Scanner fh = new Scanner(new File(fileName));
+            while (fh.hasNext()){
+                String data = fh.nextLine();
+                System.out.println(data);
+                String [] tokens = data.split("   ");
+                //for (int i = 0; i < 4; i++) {
+                    //System.out.println(tokens[i]);
+                //}
+                String u = tokens[0];
+                System.out.printf("Your account number: %s \n", u);
+                double x = Double.parseDouble(tokens[1]);
+                System.out.printf("Your starting balance: %.2f \n", x);
+                double y = Double.parseDouble(tokens[2]);
+                System.out.printf("Your most recent purchase: %.2f \n", y);
+                double z = Double.parseDouble(tokens[3]);
+                System.out.printf("Your most recent payment: %.2f \n", z);
+                //to find final balance
+                double f = (1+r/12)*x-z+y;
+                System.out.printf("Final balance = %.2f \n", f);
+                tally++;
             }
-            if (f < smallest) {
-                smallest = f;
-            }
-            
-            System.out.print("Would you like to add another customer? (y/n)");
-            resp = kb.next().toLowerCase().charAt(0);
-        }while (resp == 'y');
-        System.out.printf("The largest balance was %.2f and the smallest balance was %.2f \n", largest, smallest);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
         System.out.printf("There were %s customers \n", tally);
     }
     
