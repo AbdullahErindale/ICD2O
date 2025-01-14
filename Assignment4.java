@@ -50,6 +50,12 @@ public class FinalAssignment {
                 System.out.printf("Your most recent payment: %.2f \n", z);
                 //to find final balance
                 double f = (1+r/12)*x-z+y;
+                if (largest < f) {
+                    largest = f;
+                }
+                if (smallest > f) {
+                    smallest = f;
+                }
                 System.out.printf("Final balance = %.2f \n", f);
                 tally++;
             }
@@ -57,6 +63,7 @@ public class FinalAssignment {
             System.out.println(e.getMessage());
         }
         System.out.printf("There were %s customers \n", tally);
+        System.out.printf("The lagest balance is %.2f and the smallest is %.2f \n", largest, smallest);
     }
     
 }
